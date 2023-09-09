@@ -7,7 +7,7 @@ import {
 } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 
-const apiUrl = 'https://git.heroku.com/filmsonthefly-app.git';
+const apiUrl = 'https://filmsonthefly-app-ca635d09fe99.herokuapp.com';
 
 @Injectable({
   providedIn: 'root',
