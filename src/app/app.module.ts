@@ -21,7 +21,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 const appRoutes: Routes = [
   { path: 'Welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
-  { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
+  { path: '', redirectTo: 'Welcome', pathMatch: 'prefix' },
 ];
 
 @NgModule({
