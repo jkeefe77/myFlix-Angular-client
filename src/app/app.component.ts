@@ -19,6 +19,7 @@ export class AppComponent {
       width: '280px',
     });
   }
+  
   //Opens Dialog when the signup button is clicked
   openUserLoginDialog(): void {
     this.dialog.open(UserLoginFormComponent, {
