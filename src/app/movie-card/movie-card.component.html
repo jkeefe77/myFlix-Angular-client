@@ -2,9 +2,6 @@
   <mat-card *ngFor="let movie of movies">
     <mat-card-header class="movie-header">
       <mat-card-title class="movie-title">{{ movie.Title }}</mat-card-title>
-      <mat-card-subtitle class="movie-director"
-        >Directed by: {{ movie.Director }}
-      </mat-card-subtitle>
     </mat-card-header>
     <img height="100%" src="{{ movie.imagePath }}" alt="{{ movie.Title }}" />
     <mat-card-actions>

@@ -11,8 +11,12 @@
 }
 
 .movie-header {
-  min-height: 80px;
+  min-height: 120px;
   background-color: #d5eff2;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
 }
 
 .fave-button {
@@ -25,14 +29,10 @@
 }
 
 .movie-title {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
   font-family: "Limelight", cursive;
-}
-
-.movie-director {
-  margin-top: 1px;
-  font-size: 1em;
+  margin: 0;
 }
 
 .mat-mdc-button:not(:disabled) {
@@ -43,5 +43,3 @@
   background-color: #d5eff2;
   color: #202426;
 }
-
-
