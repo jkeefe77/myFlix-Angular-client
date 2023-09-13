@@ -21,7 +21,7 @@ export class MovieCardComponent {
   ) {}
 
   ngOnInit(): void {
-    const user = localStorage.getItem('user');
+    const user = localStorage.getItem('users');
     if (!user) {
       this.router.navigate(['welcome']);
       return;
