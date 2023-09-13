@@ -1,20 +1,47 @@
 .movie-page {
   display: grid;
   align-items: stretch;
-  grid-gap: 20px;
+  grid-gap: 40px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-auto-rows: 1fr;
   max-width: 1280px;
   margin: auto;
   padding: 40px 20px;
+  background-color: #202426;
 }
 
 .movie-header {
   min-height: 80px;
-  color: var(--primary-bg-color);
+  background-color: #d5eff2;
 }
 
 .fave-button {
   margin-left: auto;
   color: #d87093;
 }
+
+.mdc-card__actions {
+  background-color: #d5eff2;
+}
+
+.movie-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Limelight", cursive;
+}
+
+.movie-director {
+  margin-top: 1px;
+  font-size: 1em;
+}
+
+.mat-mdc-button:not(:disabled) {
+  color: #202426;
+}
+
+.mat-mdc-button:not(:disabled):hover {
+  background-color: #d5eff2;
+  color: #202426;
+}
+
+
