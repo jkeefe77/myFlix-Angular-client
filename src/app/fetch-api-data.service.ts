@@ -160,7 +160,7 @@ export class FetchApiDataService {
       .pipe(catchError(this.handleError));
   }
 
-  // Making the api call for the elete a movie from the favorite movies endpoint
+  // Making the api call to delete a movie from the favorite movies endpoint
   deleteFavoriteMovie(movieId: string): Observable<any> {
     const Username = JSON.parse(localStorage.getItem('users') || '{}');
     const token = localStorage.getItem('token');
