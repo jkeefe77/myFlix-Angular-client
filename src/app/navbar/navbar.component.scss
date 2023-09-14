@@ -5,39 +5,41 @@
   background-color: #51768c;
   position: relative;
 
-}
+  @media screen and (max-width: 767px) {
+    .navbar {
+      padding: 0 20px;
+    }
+  }
 
-.navbar-content {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-}
-
-.example-spacer {
-  color: #ebf6f8;
-  cursor: pointer;
-  
-}
-@media screen and (max-width: 767px) {
   .navbar-content {
-    display: none; /* Hide the links on small screens */
-    justify-content: space-between;
-  }
-    .example-spacer {
-    display: none;
-  }
-  .navbar {
     display: flex;
-    position: sticky;
-   min-width: 2000px;
+    align-items: center;
+    gap: 10px;
+
+    @media screen and (max-width: 767px) {
+      .navbar-content {
+        display: none; /* Hide the links on small screens */
+      }
+    }
+
+    .example-spacer {
+      color: #ebf6f8;
+      cursor: pointer;
+    }
+
+    button {
+      display: block;
+      position: sticky;
+      padding: 10px;
+
+      @media screen and (max-width: 767px) {
+      }
+
+      @media screen and (max-width: 767px) {
+        button {
+          display: block;
+        }
+      }
+    }
   }
 }
-
-  .navbar {
-    padding: 0 10px; /* Add padding for the burger menu */
-    position: sticky;
-    display: flex;
-   
-  }
-
