@@ -2,13 +2,42 @@
   position: sticky;
   bottom: 0;
   z-index: 100;
-  background-color: #51768C;
+  background-color: #51768c;
+  position: relative;
+
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .example-spacer {
-  flex: 1 1 auto;
+  color: #ebf6f8;
+  cursor: pointer;
+  
+}
+@media screen and (max-width: 767px) {
+  .navbar-content {
+    display: none; /* Hide the links on small screens */
+    justify-content: space-between;
+  }
+    .example-spacer {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    position: sticky;
+   min-width: 2000px;
+  }
 }
 
-.h2 {
-  text-decoration: none;
-}
+  .navbar {
+    padding: 0 10px; /* Add padding for the burger menu */
+    position: sticky;
+    display: flex;
+   
+  }
+

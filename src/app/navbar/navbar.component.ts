@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { Router } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +12,9 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
   constructor(
     public fetchApiData: FetchApiDataService,
-    public router: Router
+    public router: Router,
+    public MatMenuModule: MatMenuModule,
+    public MatIconModule: MatIconModule
   ) {}
 
   logoutUser(): void {

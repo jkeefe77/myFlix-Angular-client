@@ -5,10 +5,12 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-auto-rows: 1fr;
   max-width: 1280px;
+  min-width: 1280px;
   margin: auto;
   padding: 40px 20px;
   background-color: #202426;
 }
+
 
 .movie-header {
   min-height: 120px;
@@ -47,4 +49,14 @@
 html,
 body {
   background-color: #51768C;
+  display: flex;
+}
+
+img {
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
 }

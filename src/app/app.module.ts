@@ -19,6 +19,7 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MovieDetailDialogComponent } from './movie-detail-dialog/movie-detail-dialog.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
@@ -53,6 +54,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatCardModule,
     MatIconModule,
+    MatMenuModule,
     MatFormFieldModule,
     MatToolbarModule,
     MatSnackBarModule,
