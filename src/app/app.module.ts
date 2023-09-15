@@ -62,7 +62,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     {
-      provide: MatDialogRef,
+      provide: MatDialogRef, 
       useValue: {},
     },
     DialogModule,

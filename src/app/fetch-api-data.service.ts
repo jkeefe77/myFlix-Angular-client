@@ -44,6 +44,12 @@ export class FetchApiDataService {
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
+  // searchMovies(title: string): Observable<any> {
+  //   return this.http
+  //     .get(`${apiUrl}/movies/${title}`, {
+  //     })
+  //     .pipe(map(this.extractResponseData), catchError(this.handleError));
+  // }
   // Making the api call for the get one movie endpoint
   getOneMovie(title: string): Observable<any> {
     const token = localStorage.getItem('token');
@@ -195,8 +201,6 @@ export class FetchApiDataService {
         `Error Status code ${error.status}, ` + `Error body is: ${error.error}`
       );
     }
-    return throwError(
-      () => new Error('Something bad happened; please try again later.')
-    );
+    return throwError(() => new Error('Invalid entry, please try again.'));
   }
 }
