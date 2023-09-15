@@ -1,19 +1,20 @@
 .navbar {
   position: sticky;
   bottom: 0;
-  z-index: 100;
+  z-index: 1000;
   background-color: #51768c;
   position: relative;
 
   @media screen and (max-width: 767px) {
     .navbar {
-      padding: 0 20px;
+      position: static;
     }
   }
 
   .navbar-content {
     display: flex;
     align-items: center;
+
     gap: 10px;
 
     @media screen and (max-width: 767px) {
@@ -27,14 +28,10 @@
       cursor: pointer;
     }
 
-    button {
+    .button {
       display: block;
-      position: sticky;
       padding: 10px;
-
-      @media screen and (max-width: 767px) {
-      }
-
+      position: sticky;
       @media screen and (max-width: 767px) {
         button {
           display: block;

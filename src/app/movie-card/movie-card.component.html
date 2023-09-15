@@ -1,6 +1,5 @@
-<body>
-  <div class="movie-page">
-    
+ <div class="movie-page">
+    <div class="grid">
       <mat-card *ngFor="let movie of movies">
         <mat-card-header class="movie-header">
           <mat-card-title class="movie-title">{{ movie.Title }}</mat-card-title>
@@ -56,4 +55,5 @@
         </mat-card-actions>
       </mat-card>
     </div>
-</body>
+    </div>
+

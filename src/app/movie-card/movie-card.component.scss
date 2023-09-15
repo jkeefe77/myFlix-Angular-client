@@ -1,16 +1,21 @@
 .movie-page {
-  display: grid;
-  align-items: stretch;
-  grid-gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-auto-rows: 1fr;
-  max-width: 1280px;
-  min-width: 1280px;
-  margin: auto;
+  // display: grid;
+  // align-items: stretch;
+  
+  
+  // grid-auto-rows: 1fr;
+  // max-width: 1280px;
+  // min-width: 1280px;
+  // margin: auto;
   padding: 40px 20px;
   background-color: #202426;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 40px;
+}
 
 .movie-header {
   min-height: 120px;
@@ -58,5 +63,19 @@ img {
 @media screen and (max-width: 767px) {
   .grid-container {
     grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  .navbar {
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #51768c;
+    position: relative;
+  
+    @media screen and (max-width: 767px) {
+      .navbar {
+        position: static;
+      }
+    }
   }
 }

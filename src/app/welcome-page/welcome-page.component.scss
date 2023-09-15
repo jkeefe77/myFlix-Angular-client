@@ -1,9 +1,9 @@
 .main-page {
   text-align: center;
+  display: static;
 }
 
 body {
-  background-color: #202426;
   padding: 40px;
   margin: 60px;
   background-image: url(../../assets/moviebkg.jpg);
@@ -14,4 +14,8 @@ body {
 h1 {
   color: white;
   margin: 0;
+}
+
+button {
+  margin: 5px;
 }

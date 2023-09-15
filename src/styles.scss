@@ -37,9 +37,4 @@ $myFlix-Angular-client-theme: mat.define-light-theme((
 
 
 html, body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #ebf6f8; 
-  @media screen and (max-width: 1280px) {
-    .html, body {
-      display: flex;
-    }
-}
 }
