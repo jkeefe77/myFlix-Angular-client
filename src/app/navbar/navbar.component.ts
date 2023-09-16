@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { Router } from '@angular/router';
 
-
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -15,7 +13,7 @@ export class NavbarComponent {
 
   constructor(
     public fetchApiData: FetchApiDataService,
-    public router: Router,
+    public router: Router
   ) {}
 
   // performSearch(_id: string): void {
@@ -37,4 +35,3 @@ export class NavbarComponent {
     this.router.navigate(['welcome']);
   }
 }
-

@@ -138,15 +138,14 @@ export class FetchApiDataService {
   isFavoriteMovie(movieId: string): boolean {
     const user = JSON.parse(localStorage.getItem('users') || '{}');
     return user.FavoriteMovies.indexOf(movieId) >= 0;
-    }
-    
+  }
 
   // Making the api call for the edit user endpoint
-  editUser(updatedUser: any): Observable<any> {
+  editUser(updateUser: any): Observable<any> {
     const Username = JSON.parse(localStorage.getItem('users') || '{}');
     const token = localStorage.getItem('token');
     return this.http
-      .put(`${apiUrl}/users/${updatedUser.id}`, Username, {
+      .put(`${apiUrl}/users/${updateUser}`, Username, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),

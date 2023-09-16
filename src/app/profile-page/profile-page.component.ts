@@ -29,8 +29,7 @@ export class ProfilePageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-   
-const user = this.getUser();
+    const user = this.getUser();
 
     if (!user._id) {
       this.router.navigate(['welcome']);
@@ -47,9 +46,13 @@ const user = this.getUser();
   getUser(): User {
     return JSON.parse(localStorage.getItem('users') || '{}');
   }
-  getFavoriteMovies(): User {
+  getFavoriteMovies(): void {
     return JSON.parse(localStorage.getItem('users') || '{}');
   }
+
+  // this will get the user information and rreturn it along with their favourite movies
+
+  // this will edit the user information
   updateUser(): void {
     this.fetchApiData.editUser(this.userData).subscribe((result) => {
       localStorage.setItem('users', JSON.stringify(result));
