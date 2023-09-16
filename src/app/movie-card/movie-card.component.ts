@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -64,24 +64,24 @@ export class MovieCardComponent {
     });
   }
 
-  isFavorite(_id: string): boolean {
-    return this.fetchApiData.isFavoriteMovie(_id);
+  isFavorite(movieId: string): boolean {
+    return this.fetchApiData.isFavoriteMovie(movieId);
   }
 
   /**
    * calls the deleteFavoriteMovie api and shows the snackbar if successful
    * @param id the movie id
    */
-  removeFavorite(_id: string): void {
-    this.fetchApiData.deleteFavoriteMovie(_id).subscribe(() => {
+  removeFavorite(movieId: string): void {
+    this.fetchApiData.deleteFavoriteMovie(movieId).subscribe(() => {
       this.snackBar.open('removed from favorites', 'OK', {
         duration: 2000,
       });
     });
   }
 
-  addFavorite(_id: string): void {
-    this.fetchApiData.addFavoriteMovie(_id).subscribe(() => {
+  addFavorite(movieId: string): void {
+    this.fetchApiData.addFavoriteMovie(movieId).subscribe(() => {
       this.snackBar.open('added to favorites', 'OK', {
         duration: 2000,
       });
