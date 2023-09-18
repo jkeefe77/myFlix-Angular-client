@@ -6,9 +6,7 @@
     padding: 50px;
   }
 }
-.profile-form {
-  display: grid;
-}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -21,6 +19,7 @@
 }
 
 .profile-form {
+  display: grid;
   width: 100%;
   @media (min-width: 76px) {
   }
@@ -34,4 +33,14 @@
 .mat-card {
   @media (min-width: 76px) {
   }
+}
+
+.mat-mdc-list-base {
+  display: grid;
+  padding: 20px;
+  gap: 10px;
+}
+
+img {
+  grid-template-columns: 1fr;
 }

@@ -20,7 +20,7 @@ type User = {
 })
 export class ProfilePageComponent implements OnInit {
   user: any = {};
-  favoriteMovies: [] = [];
+  favoriteMovies: any[] = [];
 
   @Input() userData = {
     Username: '',

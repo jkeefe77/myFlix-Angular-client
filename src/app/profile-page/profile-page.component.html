@@ -4,6 +4,7 @@
     <div>
       <p>Username: {{ user.Username }}</p>
       <p>Email: {{ user.Email }}</p>
+      
       <mat-card>
         <mat-card-content>
           <form class="profile-form">
@@ -63,6 +64,18 @@
           </form>
         </mat-card-content>
       </mat-card>
+      <h2>Favorite Movies</h2>
+            <div *ngIf="favoriteMovies.length === 0">
+                <p>Your List Is Empty</p>
+            </div>
+            <div>
+            <mat-list>
+              <mat-list-item *ngFor="let movie of favoriteMovies" class="image-container">
+                  <img src="{{movie.imagePath}}"/>
+                  <span>{{movie.Title}}</span>
+                  </mat-list-item>
+          </mat-list>
+        </div>
     </div>
   </div>
 </div>
