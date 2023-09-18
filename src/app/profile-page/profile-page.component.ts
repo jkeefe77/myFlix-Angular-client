@@ -89,4 +89,16 @@ export class ProfilePageComponent implements OnInit {
       }
     );
   }
+  deleteUser(): void {
+    if (confirm('are you sure?')) {
+      this.router.navigate(['welcome']).then(() => {
+        this.snackBar.open('You have successfully deleted your account', 'OK', {
+          duration: 2000,
+        });
+      });
+      this.fetchApiData.deleteUser().subscribe((result) => {
+        localStorage.clear();
+      });
+    }
+  }
 }
