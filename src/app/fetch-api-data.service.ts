@@ -121,12 +121,14 @@ export class FetchApiDataService {
 
   // Making the api call for the add a movie to favorite movies endpoint
   addFavoriteMovie(movieId: string): Observable<any> {
-    const user = JSON.parse(localStorage.getItem('users') || '{}');
+    const Username = JSON.parse(localStorage.getItem('users') || '{}');
     const token = localStorage.getItem('token');
-    user.FavoriteMovies.push(movieId);
-    localStorage.setItem('users', JSON.stringify(user));
+    const index = Username.FavoriteMovies.indexOf(movieId);
+    console.log(index);
+    Username.FavoriteMovies.push(movieId);
+    localStorage.setItem('users', JSON.stringify(Username));
     return this.http
-      .post(`${apiUrl}/users/${user.Username}/movies/${movieId}`, null, {
+      .post(`${apiUrl}/users/${Username}/movies/${movieId}`, null, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
@@ -142,10 +144,10 @@ export class FetchApiDataService {
 
   // Making the api call for the edit user endpoint
   editUser(updateUser: any): Observable<any> {
-    const Username = JSON.parse(localStorage.getItem('users') || '{}');
+    const user = JSON.parse(localStorage.getItem('users') || '{}');
     const token = localStorage.getItem('token');
     return this.http
-      .put(`${apiUrl}/users/${updateUser}`, Username, {
+      .put(apiUrl + '/users/' + user.Username, updateUser, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
