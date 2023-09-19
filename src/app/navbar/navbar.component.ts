@@ -52,4 +52,3 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['welcome']);
   }
 }
-
