@@ -27,12 +27,9 @@
   </div>
   <!-- //burger menu// -->
   <div style="flex-grow: 1"></div>
-  <button
-    *ngIf="showBurgerMenu"
-    mat-icon-button
-    [matMenuTriggerFor]="menu"
-    style="color: #ebf6f8"
-  >
+  <button 
+  *ngIf="showBurgerMenu"
+  mat-icon-button [matMenuTriggerFor]="menu" style="color: #ebf6f8">
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">

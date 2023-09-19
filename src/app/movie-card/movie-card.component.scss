@@ -1,7 +1,8 @@
 .movie-page {
   // display: grid;
   // align-items: stretch;
-
+  
+  
   // grid-auto-rows: 1fr;
   // max-width: 1280px;
   // min-width: 1280px;
@@ -52,7 +53,7 @@
 
 html,
 body {
-  background-color: #51768c;
+  background-color: #51768C;
   display: flex;
 }
 
@@ -70,7 +71,7 @@ img {
     z-index: 1000;
     background-color: #51768c;
     position: relative;
-
+  
     @media screen and (max-width: 767px) {
       .navbar {
         position: static;
