@@ -1,17 +1,41 @@
 .profile {
-  padding: 26px;
   background-color: #ebf6f8;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    padding: 50px;
+  }
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr;
 }
 
-.profile-form {
-  mat-form-field {
-    width: 100%;
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
+.profile-form {
+  display: grid;
+  width: 100%;
+  @media (min-width: 768px) {
+  }
+}
 
+.profileButtons {
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+.mat-card {
+  @media (min-width: 768px) {
+  }
+}
+
+.movieimage {
+  height: 40px;
+  display: flexbox;
+}
