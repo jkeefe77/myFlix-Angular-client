@@ -159,13 +159,12 @@ export class FetchApiDataService {
   deleteUser(): Observable<any> {
     const user = JSON.parse(localStorage.getItem('users') || '{}');
     const token = localStorage.getItem('token');
-    return this.http
-      .delete(apiUrl + '/users/' + user.Username, {
-        headers: new HttpHeaders({
-          Authorization: 'Bearer ' + token,
-        }),
-      })
-      .pipe(catchError(this.handleError));
+    return this.http.delete(apiUrl + '/users/' + user.Username, {
+      headers: new HttpHeaders({
+        Authorization: 'Bearer ' + token,
+      }),
+    });
+    // .pipe(catchError(this.handleError));
   }
 
   // Making the api call to delete a movie from the favorite movies endpoint
@@ -196,8 +195,10 @@ export class FetchApiDataService {
     return body || {};
   }
   private handleError(error: HttpErrorResponse): any {
-    if (error.error instanceof ErrorEvent) {
+    if (error instanceof Error) {
       console.error('Some error occurred:', error.error.message);
+    } else if (error.status >= 200 && error.status <= 299) {
+      return;
     } else {
       console.error(
         `Error Status code ${error.status}, ` + `Error body is: ${error.error}`

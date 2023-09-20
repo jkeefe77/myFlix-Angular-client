@@ -48,6 +48,8 @@ export class UserRegistrationFormComponent implements OnInit {
 
         this.fetchApiData.userLogin(loginData).subscribe(
           (loginResponse) => {
+            localStorage.setItem('users', JSON.stringify(loginResponse.user));
+            localStorage.setItem('token', loginResponse.token);
             // Logic for successful login after registration goes here
             this.dialogRef.close(); // Close the modal on success
             console.log('User logged in:', loginResponse);

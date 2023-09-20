@@ -96,7 +96,7 @@ export class ProfilePageComponent implements OnInit {
           duration: 2000,
         });
       });
-      this.fetchApiData.deleteUser().subscribe((result) => {
+      this.fetchApiData.deleteUser().subscribe(() => {
         localStorage.clear();
       });
     }

@@ -33,10 +33,16 @@ export class NavbarComponent implements OnInit {
   //     // If the search term is empty, you can handle it here or do nothing
   //   }
   // }
+
+  get showLink(): boolean {
+    return window.location.pathname !== '/welcome';
+  }
+
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const currentRoute = event.url;
+        console.log(currentRoute);
 
         // Set the variables based on the current route
         this.showProfileLink = currentRoute !== '/welcome';
@@ -45,9 +51,13 @@ export class NavbarComponent implements OnInit {
         this.showBurgerMenu = currentRoute !== '/welcome';
       }
     });
+    // this.showProfileLink = window.location.pathname !== '/welcome';
+    // this.showMoviesLink = window.location.pathname !== '/welcome';
+    // this.showLogoutLink = window.location.pathname !== '/welcome';
+    // this.showBurgerMenu = window.location.pathname !== '/welcome';
   }
   logoutUser(): void {
-    localStorage.removeItem('user');
+    localStorage.removeItem('users');
     localStorage.removeItem('token');
     this.router.navigate(['welcome']);
   }
