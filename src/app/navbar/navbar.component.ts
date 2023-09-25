@@ -13,16 +13,10 @@ export class NavbarComponent implements OnInit {
   showLogoutLink: boolean = false;
   showBurgerMenu: boolean = true;
 
-
   constructor(
     public fetchApiData: FetchApiDataService,
     public router: Router
   ) {}
-
-
-  // get showLink(): boolean {
-  //   return window.location.pathname !== '/welcome';
-  // }
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
@@ -37,10 +31,6 @@ export class NavbarComponent implements OnInit {
         this.showBurgerMenu = currentRoute !== '/welcome';
       }
     });
-    // this.showProfileLink = window.location.pathname !== '/welcome';
-    // this.showMoviesLink = window.location.pathname !== '/welcome';
-    // this.showLogoutLink = window.location.pathname !== '/welcome';
-    // this.showBurgerMenu = window.location.pathname !== '/welcome';
   }
   logoutUser(): void {
     localStorage.removeItem('users');
