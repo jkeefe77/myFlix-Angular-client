@@ -13,26 +13,12 @@ export class NavbarComponent implements OnInit {
   showLogoutLink: boolean = false;
   showBurgerMenu: boolean = true;
 
-  // searchTerm: string = '';
-  // searchResults: any[] = [];
 
   constructor(
     public fetchApiData: FetchApiDataService,
     public router: Router
   ) {}
 
-  // performSearch(_id: string): void {
-  //   if (this.searchTerm.trim() !== '') {
-  //     // Call your API service method to filter movies based on searchTerm
-  //     this.fetchApiData.searchMovies(this.searchTerm).subscribe((filteredMovies) => {
-  //       // Handle the filteredMovies data here
-  //       this.searchResults = filteredMovies;
-  //       this.searchTerm = '';
-  //     });
-  //   } else {
-  //     // If the search term is empty, you can handle it here or do nothing
-  //   }
-  // }
 
   get showLink(): boolean {
     return window.location.pathname !== '/welcome';

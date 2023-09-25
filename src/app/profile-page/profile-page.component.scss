@@ -7,6 +7,10 @@
   }
 }
 
+p {
+  font-weight: bold;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -21,6 +25,7 @@
 .profile-form {
   display: grid;
   width: 100%;
+  font-weight: bold;
   @media (min-width: 768px) {
   }
 }
@@ -39,13 +44,8 @@
   height: 40px;
   display: flexbox;
 }
-
-.movieimage {
-  height: 40px;
-  display: flexbox;
-}
-
-.movieimage {
-  height: 40px;
-  display: flexbox;
+.mdc-text-field--no-label:not(.mdc-text-field--textarea)
+  .mat-mdc-form-field-input-control.mdc-text-field__input,
+.mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
+  font-weight: bold;
 }

@@ -4,12 +4,17 @@
   z-index: 1000;
   background-color: #51768c;
   position: relative;
+  font-weight: bold;
 
   @media screen and (max-width: 767px) {
     .navbar {
       position: static;
     }
   }
+
+.matMenu {
+  font-weight: bold;
+}
 
   .navbar-content {
     display: flex;
