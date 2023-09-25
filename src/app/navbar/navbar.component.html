@@ -7,28 +7,28 @@
 </div> -->
   <div class="navbar-content">
     <a
-      *ngIf="showLink"
+      *ngIf="showProfileLink"
       style="text-decoration: none; color: #ebf6f8"
       routerLink="/profile"
     >
       <h2>Profile</h2>
     </a>
     <a
-      *ngIf="showLink"
+      *ngIf="showMoviesLink"
       style="text-decoration: none; color: #ebf6f8"
       routerLink="/movies"
     >
       Movies</a
     >
 
-    <span *ngIf="showLink" class="example-spacer" (click)="logoutUser()"
+    <span *ngIf="showLogoutLink" class="example-spacer" (click)="logoutUser()"
       >Logout</span
     >
   </div>
   <!-- //burger menu// -->
   <div style="flex-grow: 1"></div>
   <button
-    *ngIf="showLink"
+    *ngIf="showBurgerMenu"
     mat-icon-button
     [matMenuTriggerFor]="menu"
     style="color: #ebf6f8"

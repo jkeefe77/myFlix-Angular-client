@@ -20,9 +20,9 @@ export class NavbarComponent implements OnInit {
   ) {}
 
 
-  get showLink(): boolean {
-    return window.location.pathname !== '/welcome';
-  }
+  // get showLink(): boolean {
+  //   return window.location.pathname !== '/welcome';
+  // }
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
